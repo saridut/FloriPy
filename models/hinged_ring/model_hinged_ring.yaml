@@ -1,0 +1,112 @@
+bodies:
+    1: {oblate: {a: 1.0, c: 0.1}}
+    2: {oblate: {a: 1.0, c: 0.1}}
+    3: {oblate: {a: 1.0, c: 0.1}}
+    4: {oblate: {a: 1.0, c: 0.1}}
+    5: {oblate: {a: 1.0, c: 0.1}}
+    6: {oblate: {a: 1.0, c: 0.1}}
+    7: {oblate: {a: 1.0, c: 0.1}}
+    8: {oblate: {a: 1.0, c: 0.1}}
+    9: {oblate: {a: 1.0, c: 0.1}}
+    10: {oblate: {a: 1.0, c: 0.1}}
+    11: {oblate: {a: 1.0, c: 0.1}}
+    12: {oblate: {a: 1.0, c: 0.1}}
+
+tree_joints:
+    #By definition, tree joint k has body Pr[k] as the predecessor and body k as the
+    #successor. <from> indicates the location in the predecessor coordinates and
+    #<to> indicates the location in successor coordinates. <orientation> indicates
+    #the orientation of <to> frame w.r.t the <from> frame.
+    1: 
+        joint_type: root
+        to: [-1.0, 0.0, 0.0]
+        r: [0.0, 0.0, 0.0]
+        orientation: {repr: axisangle,
+                        axis: [0.0, 0.0, 1.0],
+                        angle: 60.0,
+                        angleunits: degree}
+    2: 
+        joint_type: revolute
+        parent: 1
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: -120.0
+        angleunits: degree
+    3: 
+        joint_type: revolute
+        parent: 2
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: 60.0
+        angleunits: degree
+    4: 
+        joint_type: revolute
+        parent: 3
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: -120.0
+        angleunits: degree
+    5: 
+        joint_type: revolute
+        parent: 4
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: 60.0
+        angleunits: degree
+    6: 
+        joint_type: revolute
+        parent: 5
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: -120.0
+        angleunits: degree
+    7: 
+        joint_type: revolute
+        parent: 6
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: 60.0
+        angleunits: degree
+    8: 
+        joint_type: revolute
+        parent: 7
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: -120.0
+        angleunits: degree
+    9: 
+        joint_type: revolute
+        parent: 8
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: 60.0
+        angleunits: degree
+    10: 
+        joint_type: revolute
+        parent: 9
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: -120.0
+        angleunits: degree
+    11: 
+        joint_type: revolute
+        parent: 10
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: 60.0
+        angleunits: degree
+    12: 
+        joint_type: revolute
+        parent: 11
+        pf_edge: [[1.0, 0.0, -1.0], [1.0, 0.0, 1.0]]
+        cf_edge: [[-1.0, 0.0, -1.0], [-1.0, 0.0, 1.0]]
+        angle: -120.0
+        angleunits: degree
+
+loop_joints:
+    1:
+        joint_type: spherical
+        predecessor: 1
+        successor: 12
+        from: [-1.0, 0.0, 0.0]
+        to: [1.0, 0.0, 0.0]

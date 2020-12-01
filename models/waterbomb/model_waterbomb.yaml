@@ -1,0 +1,82 @@
+bodies:
+    1: {polygon: {vertices_xy: [[-1.0,-1.0], [0.0,-1.0], [0.0,0.0]]}}
+    2: {polygon: {vertices_xy: [[0.0,-1.0], [1.0,-1.0], [0.0,0.0]]}}
+    3: {polygon: {vertices_xy: [[1.0,-1.0], [1.0,0.0], [0.0,0.0]]}}
+    4: {polygon: {vertices_xy: [[1.0,0.0], [1.0,1.0], [0.0,0.0]]}}
+    5: {polygon: {vertices_xy: [[1.0,1.0], [0.0,1.0], [0.0,0.0]]}}
+    6: {polygon: {vertices_xy: [[0.0,1.0], [-1.0,1.0], [0.0,0.0]]}}
+    7: {polygon: {vertices_xy: [[-1.0,1.0], [-1.0,0.0], [0.0,0.0]]}}
+    8: {polygon: {vertices_xy: [[-1.0,0.0], [-1.0,-1.0], [0.0,0.0]]}}
+
+joints:
+    1:
+        joint_type: root
+        to: [0.0, 0.0, 0.0]
+        orientation: {repr: axisangle,
+                        axis: [0.0, 1.0, 0.0],
+                        angle: 0.0,
+                        angleunits: degree}
+    2: 
+        joint_type: revolute
+        pf: 1
+        sf: 2
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: -60.0
+        angleunits: degree
+    3: 
+        joint_type: revolute
+        pf: 2
+        sf: 3
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: 150.0
+        angleunits: degree
+    4: 
+        joint_type: revolute
+        pf: 3
+        sf: 4
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: -60.0
+        angleunits: degree
+    5: 
+        joint_type: revolute
+        pf: 4
+        sf: 5
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: 150.0
+        angleunits: degree
+    6: 
+        joint_type: revolute
+        pf: 5
+        sf: 6
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: -60.0
+        angleunits: degree
+    7: 
+        joint_type: revolute
+        pf: 6
+        sf: 7
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: 150.0
+        angleunits: degree
+    8: 
+        joint_type: revolute
+        pf: 7
+        sf: 8
+        pf_edge: [1,2]
+        sf_edge: [0,2]
+        angle: -60.0
+        angleunits: degree
+    9: 
+        joint_type: revolute
+        pf: 1
+        sf: 8
+        pf_edge: [0,2]
+        sf_edge: [1,2]
+        angle: -150.0
+        angleunits: degree

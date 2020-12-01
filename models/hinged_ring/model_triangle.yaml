@@ -1,0 +1,35 @@
+bodies:
+    1: {oblate: {a: 1.0, c: 0.1}}
+    2: {oblate: {a: 1.0, c: 0.1}}
+    3: {oblate: {a: 1.0, c: 0.1}}
+
+tree_joints:
+    #By definition, tree joint k has body Pr[k] as the predecessor and body k as the
+    #successor. <from> indicates the location in the predecessor coordinates and
+    #<to> indicates the location in successor coordinates. <orientation> indicates
+    #the orientation of <to> frame w.r.t the <from> frame.
+    1: 
+        joint_type: free
+        parent: 0
+        from: [0.0, 0.0, 0.0]
+        to: [0.0, 0.0, 0.0]
+        r: [0.0, 0.0, 0.0]
+        orientation: {repr: axisangle,
+                        axis: [0.0, 0.0, 1.0],
+                        angle: 0.0,
+                        angleunits: degree}
+    2: 
+        joint_type: revolute
+        parent: 1
+        pf_edge: [[1.0, -0.1, -1.0], [1.0, -0.1, 1.0]]
+        cf_edge: [[-1.0, -0.1, -1.0], [-1.0, -0.1, 1.0]]
+        angle: 120.0
+        angleunits: degree
+    3: 
+        joint_type: revolute
+        parent: 2
+        pf_edge: [[1.0, -0.1, -1.0], [1.0, -0.1, 1.0]]
+        cf_edge: [[-1.0, -0.1, -1.0], [-1.0, -0.1, 1.0]]
+        angle: 120.0
+        angleunits: degree
+loop_joints: ~
